@@ -30,7 +30,7 @@ class ProductionConfig(Config):
 
     # PostgreSQL database
     SQLALCHEMY_DATABASE_URI = '{}://{}:{}@{}:{}/{}'.format(
-        os.getenv('DB_ENGINE'   , 'mysql'),
+        os.getenv('DB_ENGINE'   , 'mariadb+mariadbconnector'),
         os.getenv('DB_USERNAME' , 'appseed_db_usr'),
         os.getenv('DB_PASS'     , 'pass'),
         os.getenv('DB_HOST'     , 'localhost'),
